@@ -1,3 +1,6 @@
+// Problem Statement
+// https://www.codechef.com/practice/course/logical-problems/DIFF800/problems/SUBSCRIBE_
+
 import java.util.*;
 
 class Codechef
