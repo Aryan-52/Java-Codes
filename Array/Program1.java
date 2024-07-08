@@ -19,27 +19,47 @@
 
 
  */
-class Program1{
-    
-	// design a metho 
-	public static int evenCount(int[] array){
-		// s1: create count and initialize with 0 
-		int count = 0 ; 
-		// s2: 
-		for( int i = 0 ; i < array.length ; i++ ){
-			// check for even 
-			if( array[i] % 2 == 0 ){
-				// increase count 
-				count++  ; 
-			}// end of if 
-		}// end of for 
-		// s3: return count 
-		return count  ; 
-	}
+import java.util.Arrays;
+import java.util.Scanner;
 
-	public static void main(String[] args) {
-		int[] a = { 2 , 3 ,4 ,5} ; 
-		System.out.println( evenCount(a) );
+public class Array_P1 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Test Case : ");
+        // Test Cases
+        int t = input.nextInt();
+        while (t-- > 0) {
+            int[] arr_num = getData(input);
+            System.out.println("Created Array : " + Arrays.toString(arr_num));
+            evenCount(arr_num);
+        }
+        input.close(); // Close the scanner after use
+    }
 
-	}
+    // Method for user-defined array
+    public static int[] getData(Scanner input) {
+        System.out.print("Enter the size of the array : ");
+        int size = input.nextInt();
+        int[] arr_num = new int[size];
+
+        System.out.println("Enter " + size + " elements:");
+        for (int i = 0; i < size; i++) {
+            arr_num[i] = input.nextInt();
+        }
+
+        return arr_num;
+    }
+
+    // Method to return the count of even elements in the given integer array
+    public static void evenCount(int[] arr_num) {
+        int count = 0;
+        for (int i = 0; i < arr_num.length; i++) {
+            // Check if the element at index i is even
+            if (arr_num[i] % 2 == 0) {
+                count++;
+            }
+        }
+        System.out.println("Output : " + count);
+    }
 }
+
