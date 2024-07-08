@@ -1,3 +1,6 @@
+// Problem Statement
+// https://www.codechef.com/practice/course/logical-problems/DIFF800/problems/BULLET
+
 import java.util.Scanner;
 
 class Codechef {
