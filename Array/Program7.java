@@ -1,3 +1,5 @@
+// Write a program to Merge two Sorted Array
+
 import java.util.Arrays;
 import java.util.Scanner;
 
